@@ -37,6 +37,8 @@ pcall(function()
         executor = "SirHurt V4"
     elseif (WrapGlobal and CheckCaller) then
         executor = "Fluxus PC"
+    elseif getscriptenv then
+        executor = "Script-Ware"
     elseif getexecutorname then
         executor = getexecutorname()
     end
